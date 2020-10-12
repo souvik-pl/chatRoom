@@ -22,8 +22,8 @@
     </form>
 
     <script src="/socket.io/socket.io.js"></script>
-	  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	  <script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
 		
     		var socket = io();
 
@@ -32,7 +32,7 @@
     		$('form').submit(function(e) {
     			e.preventDefault();            // will prevent page reloading
       			socket.emit('chat message', (name + ':  ' + $('#m').val()));
-            $('#messages').append($('<li id="list">').text('You:  ' + $('#m').val()));   //updated
+                        $('#messages').append($('<li id="list">').text('You:  ' + $('#m').val()));
       			$('#m').val('');
       			return false;
     		});
